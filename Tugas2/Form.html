@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Tiket Kereta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="bookingForm">
+        <h2>Pemesanan Tiket Kereta</h2>
+        <hr><hr>
+        <input type="text" id="nama" placeholder="Nama Pemesan" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="telepon" placeholder="Nomor Telepon" required>
+        <input type="date" id="tanggal" required>
+
+        <select id="stasiunAsal" required>
+            <option value="">Stasiun Keberangkatan</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Surabaya">Surabaya</option>
+        </select>
+
+        <select id="stasiunTujuan" required>
+            <option value="">Stasiun Tujuan</option>
+            <option value="Yogyakarta">Yogyakarta</option>
+            <option value="Semarang">Semarang</option>
+            <option value="Malang">Malang</option>
+        </select>
+
+        <select id="kelas" required>
+            <option value="">Kelas Kereta</option>
+            <option value="Ekonomi">Ekonomi</option>
+            <option value="Bisnis">Bisnis</option>
+            <option value="Eksekutif">Eksekutif</option>
+        </select>
+
+        <input type="number" id="penumpang" placeholder="Jumlah Penumpang" min="1" required>
+
+        <select id="pembayaran" required>
+            <option value="">Metode Pembayaran</option>
+            <option value="Transfer Bank">Transfer Bank</option>
+            <option value="Kartu Kredit">Kartu Kredit</option>
+            <option value="E-Wallet">E-Wallet</option>
+        </select>
+
+        <textarea id="catatan" placeholder="Catatan Tambahan"></textarea>
+        <button type="submit">Pesan Tiket</button>
+    </form>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Tiket berhasil dipesan!');
+        });
+    </script>
+</body>
+</html>
